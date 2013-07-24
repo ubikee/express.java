@@ -1,16 +1,14 @@
 package com.ubikee.express;
 
-import static kata.express.Express.HTTPMethod.DELETE;
-import static kata.express.Express.HTTPMethod.GET;
-import static kata.express.Express.HTTPMethod.POST;
-import static kata.express.Express.HTTPMethod.PUT;
+import static com.ubikee.express.Express.HTTPMethod.DELETE;
+import static com.ubikee.express.Express.HTTPMethod.GET;
+import static com.ubikee.express.Express.HTTPMethod.POST;
+import static com.ubikee.express.Express.HTTPMethod.PUT;
+
+import com.ubikee.express.Express.HTTPMethod;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
-
-import kata.express.Route;
-import kata.express.RouteRequest;
-import kata.express.Routes;
 
 import com.sun.net.httpserver.HttpContext;
 import com.sun.net.httpserver.HttpExchange;

@@ -1,12 +1,13 @@
-package kata.express;
+package com.ubikee.express;
 
 import static com.google.common.base.Preconditions.*;
-import static kata.express.Express.HTTPMethod.*;
-
-import kata.express.Express.HTTPMethod;
+import static com.ubikee.express.Express.HTTPMethod.*;
 
 import java.util.Map;
 import java.util.HashMap;
+
+import com.ubikee.express.Express;
+import com.ubikee.express.Express.HTTPMethod;
 
 public class Routes {
 
