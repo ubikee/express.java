@@ -5,6 +5,8 @@ import static com.ubikee.express.Express.HTTPMethod.*;
 import com.ubikee.express.Express;
 import com.ubikee.express.Express.HTTPMethod;
 
+import java.io.IOException;
+
 
 public class Route {
 		
@@ -18,7 +20,7 @@ public class Route {
 		this.handler = handler;
 	}
 
-	public void process(RouteRequest request) {
-		handler.handle(request, new RouteResponse());
+	public void process(RouteRequest request, RouteResponse response) throws IOException{
+		handler.handle(request, response);
 	}
 }

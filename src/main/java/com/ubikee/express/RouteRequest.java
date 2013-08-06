@@ -1,10 +1,8 @@
 package com.ubikee.express;
 
-public class RouteRequest {
+public interface RouteRequest {
 
-	public final String path;
+	String path();
 
-	public RouteRequest(final String path) {
-		this.path = path;
-	}
+    String param(String name);
 }

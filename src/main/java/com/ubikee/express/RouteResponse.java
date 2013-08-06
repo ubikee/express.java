@@ -1,12 +1,9 @@
 package com.ubikee.express;
 
-public class RouteResponse {
+import java.io.IOException;
 
-	public void send(String content) {
-		//TODO
-	}
+public interface RouteResponse {
 
-//   public void render(String path, ErrorHandler ErrorHandler) {
-//		//TODO
-//	}
+	void send(String content) throws IOException;
+
 }

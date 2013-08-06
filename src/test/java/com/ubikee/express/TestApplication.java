@@ -7,6 +7,7 @@ import static com.ubikee.express.Express.HTTPMethod.*;
 import org.junit.*;
 
 import com.ubikee.express.RouteRequest;
+import org.junit.Test;
 
 public class TestApplication {
 
@@ -17,7 +18,7 @@ public class TestApplication {
 		app = express();
 	}
 
-	@Test 
+	@Test
 	public void shouldAddRoute() {
 		app.get   ("/world", (req, res) -> res.send("get world"));
 		app.post  ("/world", (req, res) -> res.send("post world"));
@@ -26,12 +27,13 @@ public class TestApplication {
 		assertEquals(4, app.routes.size());
 	}
 
-	@Test(expected=IllegalArgumentException.class) 
+   /*
+	@HTTPTest(expected=IllegalArgumentException.class)
 	public void shouldNotProcessInvalidRequest() {
 		app.process(GET, new RouteRequest("/invalid"));
 	}
 
-	@Test 
+	@HTTPTest
 	public void shoulProcessRequest() {
 		app.get("/", (req, res) -> res.send("hello world"));
 		app.process(GET, new RouteRequest("/"));
@@ -39,7 +41,7 @@ public class TestApplication {
 	}
 
 /*
-	@Test public void should() {
+	@HTTPTest public void should() {
 
 		app.get("/login", (req, res) -> {
 
